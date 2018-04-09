@@ -1,1 +1,9 @@
 C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\obj\Debug\CustomListUnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\bin\Debug\CustomList.exe
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\bin\Debug\CustomList.pdb
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

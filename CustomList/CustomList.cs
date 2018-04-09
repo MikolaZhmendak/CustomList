@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class MyCustomList<T>
+    public class MyCustomList<T> : IEnumerable<T>
     {
         T[] tempValue;
         int arraySize;
@@ -14,25 +15,17 @@ namespace CustomList
 
 
         public MyCustomList()
-            {
+        {
             arraySize = 10;
             tempValue = new T[arraySize];
 
-        //my generic list
-        // methods to create here:
-        // 1. Write a  method that will store values inside the array;
-        // 2. Wtite a method that will add objects in my list;
-        // 3. Write a method that will remove objects from my list;
-        // 4. Write a method that will add two instances of my custom lits;
-        // 5. Write a method that will zip two instances of my custom class. See exapmle in user story.
-    }
+        }
 
-        //    Define the indexer to allow client code to use[] notation.
         public T this[int i]
         {
             get
-            { 
-            return tempValue[i];
+            {
+                return tempValue[i];
             }
             set
             {
@@ -40,17 +33,40 @@ namespace CustomList
             }
         }
 
-        public void StoreToList (T input)
+        public int ListCount
         {
-            
-         
+            get
+            {
+                return count;
+            }
+            set
+            {
+                count = value;
+            }
 
 
         }
- 
-    }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            return ((IEnumerable<T>)tempValue).GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable<T>)tempValue).GetEnumerator();
+        }
+
+        public void Add(T input)
+        {
+            tempValue[count] = input; 
+            count++;
+
+        }
+    }
 }
+   
+
 
 
 
