@@ -1,1 +1,6 @@
 C:\Users\Mikola\Desktop\MyC# porjects\CustomList\CustomList\bin\Debug\CustomList.exe.config
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\CustomList\bin\Debug\CustomList.exe
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\CustomList\bin\Debug\CustomList.pdb
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\CustomList\obj\Debug\CustomList.csprojResolveAssemblyReference.cache
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\CustomList\obj\Debug\CustomList.exe
+C:\Users\Mikola\Desktop\MyC# porjects\CustomList\CustomList\obj\Debug\CustomList.pdb
