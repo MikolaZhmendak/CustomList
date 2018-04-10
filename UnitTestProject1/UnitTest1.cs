@@ -31,31 +31,31 @@ namespace UnitTestProject1
             list.Add("Hello");
             list.Add("Mikola");
             list.Add("Zhmendak");
-            string expected = "Mikola";
-            int mycount = list.ListCount;
-            Assert.AreEqual(expected, mycount);
+            string expected = "Zhmendak";
 
-            // }
-            // [TestMethod]
-            // public void Store_double_PutdoubleInTheArray()
-            // {
-            //     //  int expectedValue;
-            //     MyCustomList<double> list = new MyCustomList<double>();
-            //     double value = 234;
-            ////     list.StoreToList(value);
-
-            //     Assert.AreEqual(list[0], value);
+            Assert.AreEqual(expected, list[2]);
 
         }
-        //     [TestMethod]
-        //       public void Count_Int_CountIntInTheArray()
 
 
+        [TestMethod]
+        public void Remove_String_CheckIndex4()
+        {
+            MyCustomList<string> list = new MyCustomList<string>();
+            list.Add("Hello");
+            list.Add("Mikola");
+            list.Add("Zhmendak");
+            list.Add("The");
+            list.Add("Ukr");
+            list.Remove("Mikola");
+            string expected = "Hello";
+
+            Assert.AreEqual(expected, list[2]);
 
 
+        }
 
-
-    }
+        }
 
 }
 

@@ -9,7 +9,7 @@ namespace CustomList
 {
     public class MyCustomList<T> : IEnumerable<T>
     {
-        T[] tempValue;
+        T[] temporaryArray;
         int arraySize;
         int count;
 
@@ -17,7 +17,7 @@ namespace CustomList
         public MyCustomList()
         {
             arraySize = 10;
-            tempValue = new T[arraySize];
+            temporaryArray = new T[arraySize];
 
         }
 
@@ -25,11 +25,11 @@ namespace CustomList
         {
             get
             {
-                return tempValue[i];
+                return temporaryArray[i];
             }
             set
             {
-                tempValue[i] = value;
+               temporaryArray[i] = value;
             }
         }
 
@@ -49,22 +49,46 @@ namespace CustomList
 
         public IEnumerator<T> GetEnumerator()
         {
-            return ((IEnumerable<T>)tempValue).GetEnumerator();
+            return ((IEnumerable<T>)temporaryArray).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable<T>)tempValue).GetEnumerator();
+            return ((IEnumerable<T>)temporaryArray).GetEnumerator();
         }
 
         public void Add(T input)
         {
-            tempValue[count] = input; 
+            temporaryArray[count] = input;
             count++;
 
         }
-    }
-}
+        public bool Remove(T input)
+        {
+
+            for (int i = 0; i < count; i++)
+            {
+                if (temporaryArray[i].Equals(input))
+                {
+                    count--;
+                    temporaryArray[i] = temporaryArray[i + 1];
+                 
+                    return true;
+                }
+
+            }
+            return false;
+
+
+        }
+
+                }
+
+            }
+     
+    
+
+
    
 
 
