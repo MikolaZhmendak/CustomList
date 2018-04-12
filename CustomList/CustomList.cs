@@ -154,23 +154,34 @@ namespace CustomList
             }
 
             temporaryArray = resizedArray;
-            //int count = 0;
-            //T[] resizedArray = new T[temporaryArray.Length-1];
-            //for ( int i )
 
         }
+
+
+        public static MyCustomList<T> operator + (MyCustomList<T> one, MyCustomList<T> two)
+        {
+
+            MyCustomList<T> combinedList = new MyCustomList<T>();
+            for ( int i = 0; i <= one.Count-1; i++)
+            {
+                combinedList.Add(one[i]);
+            }
+            for (int i = 0; i <= two.Count-1; i++)
+            {
+                combinedList.Add(two[i]);
+            }
+
+            return combinedList;
+        }
+
+
+
+
+
+
 
     }
-
-        }
-    
-     
-    
-
-
-   
-
-
+}
 
 
     

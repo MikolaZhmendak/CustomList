@@ -10,18 +10,21 @@ namespace CustomList
     {
         static void Main(string[] args)
         {
-            MyCustomList<int> list = new MyCustomList<int>();
-            list.Add(12);
-            list.Add(22);
-            list.Add(32);
-            list.Add(42);
-            list.Add(62);
-            list.Add(72);
-            list.Add(82);
-            list.Add(92);
-            list.Remove(32);
-            list.Remove(92);
-            foreach ( int number in list)
+            MyCustomList<int> list1 = new MyCustomList<int>();
+            list1.Add(12);
+            list1.Add(22);
+            list1.Add(32);
+            MyCustomList<int> list2 = new MyCustomList<int>();
+             
+            list2.Add(42);
+            list2.Add(62);
+            list2.Add(72);
+
+
+            MyCustomList<int> listoneplustwo = new MyCustomList<int>();
+            listoneplustwo = list1 + list2;
+
+            foreach ( int number in listoneplustwo)
                 Console.WriteLine(number);
             Console.ReadLine();
           

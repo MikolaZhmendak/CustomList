@@ -212,8 +212,126 @@ namespace UnitTestProject1
             Assert.AreEqual(expected, actual);
 
         }
+
+        //++++++++++++++++++++++++++++++++ Test overload + operator ++++++++++++++++++++++++++++++++
+        [TestMethod]
+        public void Add_TwoLists_CheckExpactedCapasity()
+        {
+            MyCustomList<int> list1 = new MyCustomList<int>();
+            list1.Add(5);
+            list1.Add(6);
+            list1.Add(7);
+
+            MyCustomList<int> list2 = new MyCustomList<int>();
+            list2.Add(7);
+            list2.Add(8);
+            list2.Add(9);
+
+            MyCustomList<int> listOnePlusTwo = new MyCustomList<int>();
+            listOnePlusTwo.Add(5);
+            listOnePlusTwo.Add(6);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(8);
+            listOnePlusTwo.Add(9);
+            MyCustomList<int> actualCombinedList = new MyCustomList<int>();
+
+         
+            int expected = 6;
+            actualCombinedList = list1 + list2;
+
+            Assert.AreEqual(expected, actualCombinedList.Count);
+        }
+
+        [TestMethod]
+        public void Add_TwoLists_CheckIndexValueIndex0()
+        {
+            MyCustomList<int> list1 = new MyCustomList<int>();
+            list1.Add(5);
+            list1.Add(6);
+            list1.Add(7);
+
+            MyCustomList<int> list2 = new MyCustomList<int>();
+            list2.Add(7);
+            list2.Add(8);
+            list2.Add(9);
+
+            MyCustomList<int> listOnePlusTwo = new MyCustomList<int>();
+            listOnePlusTwo.Add(5);
+            listOnePlusTwo.Add(6);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(8);
+            listOnePlusTwo.Add(9);
+
+            MyCustomList<int> actualCombinedList = new MyCustomList<int>();
+
+            int expected = 5;
+            actualCombinedList = list1 + list2;
+
+            Assert.AreEqual(expected, actualCombinedList[0]);
+        }
+        [TestMethod]
+        public void Add_TwoLists_CheckIndexValueIndex3()
+        {
+            MyCustomList<int> list1 = new MyCustomList<int>();
+            list1.Add(5);
+            list1.Add(6);
+            list1.Add(7);
+
+            MyCustomList<int> list2 = new MyCustomList<int>();
+            list2.Add(7);
+            list2.Add(8);
+            list2.Add(9);
+
+            MyCustomList<int> listOnePlusTwo = new MyCustomList<int>();
+            listOnePlusTwo.Add(5);
+            listOnePlusTwo.Add(6);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(8);
+            listOnePlusTwo.Add(9);
+
+            MyCustomList<int> actualCombinedList = new MyCustomList<int>();
+
+            actualCombinedList = list1 + list2;
+
+            int expected = 7;
+            
+
+            Assert.AreEqual(expected, actualCombinedList[3]);
+        }
+        [TestMethod]
+        public void Add_TwoLists_CheckLastItmemIndex()
+        {
+            MyCustomList<int> list1 = new MyCustomList<int>();
+            list1.Add(5);
+            list1.Add(6);
+            list1.Add(7);
+
+            MyCustomList<int> list2 = new MyCustomList<int>();
+            list2.Add(7);
+            list2.Add(8);
+            list2.Add(9);
+
+            MyCustomList<int> listOnePlusTwo = new MyCustomList<int>();
+            listOnePlusTwo.Add(5);
+            listOnePlusTwo.Add(6);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(7);
+            listOnePlusTwo.Add(8);
+            listOnePlusTwo.Add(9);
+
+            MyCustomList<int> actualCombinedList = new MyCustomList<int>();
+
+            actualCombinedList = list1 + list2;
+            int expected = 9;
+
+            Assert.AreEqual(expected, actualCombinedList[5]);
+        }
     }
 }
+
         
     
 
